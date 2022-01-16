@@ -6,8 +6,5 @@ urlpatterns = [
    path('add-people/',AddPeople.as_view(),name="add-people"),
    path('edit-people/<int:pk>',EditPeople.as_view(),name='edit-people'),
    path('delete-people/<int:pk>',DeletPeople.as_view(),name='delete-people'),
-   
-
-
 ]
 
