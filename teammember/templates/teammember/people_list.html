@@ -1,0 +1,62 @@
+{% extends 'teammember/main.html' %}
+{% block content %}
+<div class="container" id="big1">
+    <div style="width: 350px;height:100%;padding:auto" class="container-sm">
+    <div class="row text-center">
+        <div class="col text-center"style="padding-bottom: 12px;padding-top: 12px;">
+            <h3 style="padding:auto;">List Page</h3>
+        </div>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="container" id="big">
+<div style="background:white" class="container-sm"   id="cont">
+    <div class="row">
+        <div class="col-12 text-right">
+           <a style="color: #007bff;" href="{% url 'add-people' %}"> <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-plus text-right " viewBox="0 0 16 16">
+                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+              </svg></a>
+        </div>
+</div>
+    <div class="row">
+        <div style="font-size:x-large" class="col-sm" style="margin-top: 30px;">
+          Team Members <br><h6 id="opa" style="font-size: small;">you have {{totalcount}} team members</h6>
+        </div>
+   </div>
+   <hr class="solid">
+ {% for a in peoplelist %}
+  <a  href="{% url 'edit-people' a.id %}"><div class="row"> 
+    <div class="col-3">
+        <div class="box">
+            {% load static %}
+            <img class="thumb-lg img-circle bx-s" src="{% static 'placeholder.png' %}" alt="">
+            
+           <!--  "https://bootdey.com/img/Content/user_2.jpg" -->
+    </div>
+    </div>
+    <div class="col-9">
+        {% if a.choice == "admin" %}
+        <h6 style="font-size: small;">{{a.firstname}} {{a.lastname}} (admin)</h6>
+        {% else %}
+        <h6 style="font-size: small;">{{a.firstname}} {{a.lastname}}</h6>
+        {% endif %}
+        <br>
+        <h6 id="opa" style="font-size: small;">{{a.email}}</h6>
+        <br>
+        <h6 id="opa" style="font-size: small;">{{a.phone}}</h6>
+        
+       
+        
+    </div>
+  </div></a>
+  <hr class="solid">
+  {% empty %}
+  {% endfor %}
+
+</div>
+</div>
+{% endblock content %}
