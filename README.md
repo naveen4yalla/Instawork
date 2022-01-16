@@ -14,15 +14,16 @@ This Project helps employess to add and edit the employee details....
 6. To install project dependencies enter  - pip install -r requirements.txt
 7. To start running server - python manage.py runserver
 
-Features:
-1)List page to show the Team
-2)Add page to add the users 
-3)Edit page to edit the user info 
+## Features:
+1) List page to show the Team
+2) Add page to add the users 
+3) Edit page to edit the user info 
 
 
-Tech Stacks
-Django
+# Tech Stacks
+1.  Django
 
-List Page //screenshot
-Add Page //screenshot
-Edit page //screenshot
+##  Screenshots
+1. List Page //screenshot
+2. Add Page //screenshot
+3. Edit page //screenshot
