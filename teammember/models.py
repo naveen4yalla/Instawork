@@ -16,6 +16,11 @@ class People(models.Model):
     ]
     #default role is member
     choice=models.CharField(choices=role,default="member",max_length=20)
+    def clean(self):
+        self.firstname=self.firstname.capitalize().title()
+        self.lastname = self.lastname.capitalize().title()
+
+
 
    
     
@@ -26,5 +31,7 @@ class People(models.Model):
     #The list will be ordered according to the time they were created 
     class Meta:
         ordering = ['create']
+
+
 
 
