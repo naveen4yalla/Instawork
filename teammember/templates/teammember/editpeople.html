@@ -68,16 +68,25 @@
     
      <script>
         document.getElementsByName('phone')[0].onkeyup = function(e) {
-   phone_number_check(this,e);
+        phone_number_check(this,e);
     }
+    
+    if (document.getElementById("id_choice_0").checked ==false){
+        toggleMenuClick1()
+
+    }
+    else{
+        toggleMenuClick()
+    }
+
+
+    
     $("#id_choice_0").click(function(){
-        $('[for="id_choice_1"]').css("opacity", "0.5");
-        $('[for="id_choice_0"]').css("opacity", "1");
+        toggleMenuClick()
 
     })
     $("#id_choice_1").click(function(){
-        $('[for="id_choice_0"]').css("opacity", "0.5");
-        $('[for="id_choice_1"]').css("opacity", "1");
+        toggleMenuClick1()
 
     })
 
@@ -97,22 +106,3 @@
     radio1.classList.add("float-right");
     console.log("hello")
 </script>
-
-
-
-<!-- <label for="{{ radio.id_for_label }}">
-        
-         <span class="radio">{{ radio.tag }}</span> 
-        <span class="user-level {{ radio.choice_value }}">{{ radio }}</span>
-    </label> -->
-    <!-- {{ radio.choice_label }} -->
-
-
-
-
-    <!-- {% for radio in form.choice %}
-            <div class="form-check">
-                {{radio}}
-            </div>
-            {% endfor %} -->
-            

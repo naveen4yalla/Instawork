@@ -19,7 +19,7 @@
         
         <div class="row">
             <div style="font-size:x-large" class="col-sm" style="margin-top: 30px;">
-              Add a team member <br><h6 id="opa" style="font-size: small;">Set Email Location and Role</h6>
+              Add a team member <br><h6 id="opa" style="font-size: small;">Set email, location and role</h6>
             </div>
        </div>
        <hr class="solid">
@@ -72,21 +72,9 @@
 }
 $('[for="id_choice_1"]').css("opacity", "0.5");
 $("#id_choice_0").prop("checked", true);
-$("#id_choice_0").click(function(){
-        $('[for="id_choice_1"]').css("opacity", "0.5");
-        $('[for="id_choice_0"]').css("opacity", "1");
-        $('#id_choice_0').prop("checked", true);
-        $('#id_choice_1').prop("checked", false);
-
-    })
-    $("#id_choice_1").click(function(){
-        $('[for="id_choice_0"]').css("opacity", "0.5");
-        $('[for="id_choice_1"]').css("opacity", "1");
-        $('#id_choice_0').prop("checked", false);
-        $('#id_choice_1').prop("checked", true);
-
-    })
-    </script>
+$("#id_choice_0").click(function(){toggleMenuClick()} )
+$("#id_choice_1").click(function(){toggleMenuClick1()})
+</script>
 
 
 </div>

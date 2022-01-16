@@ -76,5 +76,18 @@ function phone_formatting(ele,restore) {
     }
   
   }
+  var toggleMenuClick = function() {
+    $('[for="id_choice_1"]').css("opacity", "0.5");
+    $('[for="id_choice_0"]').css("opacity", "1");
+    $('#id_choice_0').prop("checked", true);
+    $('#id_choice_1').prop("checked", false);
+  
+} 
+var toggleMenuClick1 = function() {
+  $('[for="id_choice_0"]').css("opacity", "0.5");
+        $('[for="id_choice_1"]').css("opacity", "1");
+        $('#id_choice_0').prop("checked", false);
+        $('#id_choice_1').prop("checked", true);
+}
   
   

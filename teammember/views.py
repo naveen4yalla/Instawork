@@ -21,14 +21,12 @@ class AddPeople(CreateView):
     form_class = PostForm
     context_object_name = 'addpeople'
     template_name = 'teammember/addpeople.html'
-    #fields ='__all__'
     success_url = reverse_lazy('team')
 
     
 class EditPeople(UpdateView):
     model=People
     context_object_name = 'editpeople'
-    #fields ='__all__'
     form_class = PostForm
     template_name = 'teammember/editpeople.html'
     success_url = reverse_lazy('team')
