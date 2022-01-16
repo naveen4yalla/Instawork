@@ -1,4 +1,5 @@
 {% extends 'teammember/main.html' %}
+{% load phone %}
 {% block content %}
 <div class="container" id="big1">
     <div style="width: 350px;height:100%;padding:auto" class="container-sm">
@@ -47,7 +48,7 @@
         <br>
         <h6 id="opa" style="font-size: small;">{{a.email}}</h6>
         <br>
-        <h6 id="opa" style="font-size: small;">{{a.phone}}</h6>
+        <h6 id="opa" style="font-size: small;">{{a.phone|phoneconcatinate}}</h6>
         
        
         

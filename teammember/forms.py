@@ -21,6 +21,12 @@ class PostForm(forms.ModelForm):
         self.fields['phone'] = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Phone'}))
         #Removing labels for the form 
         self.fields['firstname'].label ,self.fields['lastname'].label , self.fields['email'].label,self.fields['phone'].label = "","","",""
+    
+    def clean_phone(self):
+        data=self.cleaned_data['phone'] 
+        data=data.replace("-","")
+        return data
+
         
 
       

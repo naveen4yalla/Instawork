@@ -15,6 +15,11 @@ class TeamList(ListView):
         context = super().get_context_data(**kwargs)
         context['totalcount'] = People.objects.all().count
         return context
+    """ def get_queryset(self):
+        queryset = super(TeamList,self).get_queryset()
+        for a in queryset:
+            a.phone=a[:3]+"-"+a[4:7]+"-"+a[7:]
+        return queryset """
 
 class AddPeople(CreateView):
     model = People
