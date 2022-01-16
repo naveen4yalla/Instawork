@@ -3,7 +3,7 @@
 This Project helps employess to add and edit the employee details....
 
 ## Installation:
-1. Clone Repo -  [https://github.com/naveen4yalla/Instawork.git] (https://github.com/naveen4yalla/Instawork.git)
+1. Clone Repo -  [Github Link](https://github.com/naveen4yalla/Instawork).
 2. Install Virtual Environmnet - sudo pip3 install virtualenv
     - mkdir Instawork
     - In the directory virtualenv env_Instawork -p python3 
