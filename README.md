@@ -5,9 +5,9 @@ This Project helps employess to add and edit the employee details....
 ## Installation:
 1. Clone Repo -  [https://github.com/naveen4yalla/Instawork.git] (https://github.com/naveen4yalla/Instawork.git)
 2. Install Virtual Environmnet - sudo pip3 install virtualenv
-  - mkdir Instawork
-  - In the directory virtualenv env_Instawork -p python3 
-  - source env_Instawork/bin/activate
+    - mkdir Instawork
+    - In the directory virtualenv env_Instawork -p python3 
+    - source env_Instawork/bin/activate
 3. To deactivate the virtual environment  - deactivate
 4. To Install DJANGO -  pip install django
 5. django-admin startproject InstaworkProject
