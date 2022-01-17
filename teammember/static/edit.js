@@ -98,7 +98,7 @@ var phone_slicing = function(){
    
      document.getElementsByClassName("headings")[0].innerHTML ="Edit Page"
      document.getElementsByClassName("headings")[1].innerHTML = "Edit team member"
-     document.getElementsByClassName("headings")[2].innerHTML = "Edit contact info and location"
+     document.getElementsByClassName("headings")[2].innerHTML = "Edit contact info and location."
  }
 }
   
