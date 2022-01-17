@@ -3,7 +3,7 @@
 This Project helps employess to add and edit the employee details....
 
 ## Installation:
-1. Install Virtual Environmnet - sudo pip3 install virtualenv
+1. Install Virtual Environmnet - ``` sudo pip3 install virtualenv ```
     - create a directory - mkdir Instawork
     - In the directory - virtualenv env_Instawork -p python3 
     - Activate the environment - source env_Instawork/bin/activate
