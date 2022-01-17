@@ -3,9 +3,9 @@ from django.contrib.auth.models import User
 from django.core.validators import MinLengthValidator
 # Create your models here.
 class People(models.Model):
-    firstname = models.CharField(max_length=100,null=False,blank=False)
-    lastname =models.CharField(max_length=100,null=True,blank=False)
-    email = models.EmailField(max_length = 100,unique=True)
+    firstname = models.CharField(max_length=40,null=False,blank=False)
+    lastname =models.CharField(max_length=40,null=True,blank=False)
+    email = models.EmailField(max_length = 50,unique=True)
     phone = models.CharField(max_length=13,null=False,blank=False,unique=True,validators=[MinLengthValidator(10)])
     #This field will be automatically populated 
     create = models.DateTimeField(auto_now_add=True)

@@ -4,73 +4,19 @@
 {% load phone %}
 {% block content %}
 
-<div class="container" id="big1">
-    <div style="width: 350px;height:100%;padding:auto" class="container-sm">
-    <div class="row text-center">
-        <div class="col text-center"style="padding-bottom: 12px;padding-top: 12px;">
-            <h3 style="padding:auto;">Edit Page</h3>
-        </div>
-</div>
-</div>
-</div>
+{% include 'teammember/mainbar.html' %}
 
-<div class="container" id="big">
-    <div style="background:white" class="container-sm"   id="cont">
-        
-        
-        <div class="row">
-            <div style="font-size:x-large" class="col-sm" style="margin-top: 30px;">
-              Edit Team <br><h6 id="opa" style="font-size: small;">Edit contact info,location and role</h6>
-            </div>
-       </div>
-       <hr class="solid">
-    
-       <form method="post" action="">
-        {% csrf_token %}
-        <div class="row">
-            <div style="margin-bottom: 10px;">Info</div>
-          <div class="col-12">
-            {{ form.firstname|as_crispy_field }}
-          </div>
-          <div class="col-12">
-            {{ form.lastname|as_crispy_field }}
-          </div>
-          <div class="col-12">
-            {{ form.email|as_crispy_field }}
-          </div>
-          <div class="col-12">
-            {{ form.phone|as_crispy_field }}
-          </div>
-          
-          <div style="margin-top: 10px;" class="col-12">
-            <div>Role</div>
-            
-            {% for radio in form.choice %}
-            <div style="padding-left:0;" class="form-check row">
-    <label for="{{ radio.id_for_label }}">
-        {{ radio.choice_label }}
-        <span class="radio float-right">{{ radio.tag }}</span>
-        <br><br>
-        <hr  class="solid">
-    </label>
-    </div>
-{% endfor %}
-</div>
-</div>
-       <div clas=row>
-       
-        <button type="submit" class="btn  float-right btn-primary",value="submit">Save</button>
-    </div>
-      </form>
-      <form method="POST" action="{% url 'delete-people' form.instance.id %}">
+
+      <form method="POST" id="delete_id" action="{% url 'delete-people' form.instance.id %}">
         {% csrf_token %}<input style="border-color:whitesmoke;" class="btn btn-outline-danger float-left" type="submit" value="DELETE">
      </form>
     
     
      <script>
+       phone_slicing()
+
         document.getElementsByName('phone')[0].onkeyup = function(e) {
-        phone_number_check(this,e);
-    }
+        phone_number_check(this,e); }
     
     if (document.getElementById("id_choice_0").checked ==false){
         toggleMenuClick1()

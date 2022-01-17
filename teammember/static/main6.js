@@ -89,5 +89,17 @@ var toggleMenuClick1 = function() {
         $('#id_choice_0').prop("checked", false);
         $('#id_choice_1').prop("checked", true);
 }
+
+var phone_slicing = function(){
+  if (document.getElementById("delete_id")){
+    var value = document.getElementById("id_phone").value
+    value = value.slice(0,3)+"-"+value.slice(3,6)+"-"+value.slice(6,10)
+    document.getElementById("id_phone").value = value
+   
+     document.getElementsByClassName("headings")[0].innerHTML ="Edit Page"
+     document.getElementsByClassName("headings")[1].innerHTML = "Edit team member"
+     document.getElementsByClassName("headings")[2].innerHTML = "Edit contact info and location"
+ }
+}
   
   

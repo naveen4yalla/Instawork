@@ -3,68 +3,7 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<div class="container" id="big1">
-    <div style="width: 350px;height:100%;padding:auto" class="container-sm">
-    <div class="row text-center">
-        <div class="col text-center"style="padding-bottom: 12px;padding-top: 12px;">
-            <h3 style="padding:auto;">Add People</h3>
-        </div>
-</div>
-</div>
-</div>
-
-<div class="container" id="big">
-    <div style="background:white" class="container-sm"   id="cont">
-        
-        
-        <div class="row">
-            <div style="font-size:x-large" class="col-sm" style="margin-top: 30px;">
-              Add a team member <br><h6 id="opa" style="font-size: small;">Set email, location and role</h6>
-            </div>
-       </div>
-       <hr class="solid">
-    
-       <form method="post" action="">
-        {% csrf_token %}
-        <div class="row">
-            <div style="margin-bottom: 10px;">Info</div>
-          <div class="col-12">
-            {{ form.firstname|as_crispy_field }}
-          </div>
-          <div class="col-12">
-            {{ form.lastname|as_crispy_field }}
-          </div>
-          <div class="col-12">
-            {{ form.email|as_crispy_field }}
-          </div>
-          <div class="col-12">
-            {{ form.phone|as_crispy_field }}
-          </div>
-          
-          <div style="margin-top: 10px;" class="col-12">
-            <div>Role</div>
-            <div  style="margin-top: 10px;">
-            {% for radio in form.choice %}
-            <div style="padding-left:0;" class="form-check row">
-    <label for="{{ radio.id_for_label }}">
-        
-        {{ radio.choice_label }}
-        
-        <span class="radio float-right">{{ radio.tag }}</span>
-        <br><br>
-        <hr  class="solid">
-    </label>
-    
-    
-</div>
-{% endfor %}
-</div>       
-
-          </div>
-          
-        </div>
-        <button type="submit" class="btn btn-primary float-right ",value="submit">Save</button>
-      </form>
+{% include 'teammember/mainbar.html' %}
     
     <script>
        document.getElementsByName('phone')[0].onkeyup = function(e) {
@@ -75,8 +14,6 @@ $("#id_choice_0").prop("checked", true);
 $("#id_choice_0").click(function(){toggleMenuClick()} )
 $("#id_choice_1").click(function(){toggleMenuClick1()})
 </script>
-
-
 </div>
 </div>
 {% endblock content %}
