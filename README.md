@@ -16,12 +16,17 @@ This Project helps employess to add and edit the employee details....
 
 ## Features:
 1) List page to show the Team
-2) Add page to add the users 
-3) Edit page to edit the user info 
+   - Shows the count of the  team members and the member details
+3) Add page to add the users
+   - phone number and email should be unique.Phone number should be of 10 characters
+   - By default member role is set to regular
+5) Edit page to edit the user info 
+   - can make changes or delete the member
 
 
 # Tech Stacks
 1.  Django
+2.  Frontend-HTML,CSS,JS,Bootstrap
 
 ##  Screenshots
 1. List Page 
