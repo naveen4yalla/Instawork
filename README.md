@@ -1,6 +1,6 @@
 # Instawork
 
-This Project helps employee to add and edit team member details....
+This Project helps employee to add and edit team member details
 
 ## Installation:
 1. Install Virtual Environmnet - ``` sudo pip3 install virtualenv ```
