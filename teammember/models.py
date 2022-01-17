@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MinLengthValidator
-# Create your models here.
+
 class People(models.Model):
     firstname = models.CharField(max_length=40,null=False,blank=False)
     lastname =models.CharField(max_length=40,null=True,blank=False)
