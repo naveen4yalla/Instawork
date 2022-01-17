@@ -24,6 +24,7 @@ This Project helps employess to add and edit the employee details....
 1.  Django
 
 ##  Screenshots
-1. List Page <img width="427" alt="Screen Shot 2022-01-16 at 5 34 46 PM" src="https://user-images.githubusercontent.com/45757384/149688034-6e5b16da-467b-4aff-9270-c3311deaeb5a.png">
-2. Add Page //screenshot
-3. Edit page //screenshot
+1. List Page 
+2. <img width="427" alt="Screen Shot 2022-01-16 at 5 34 46 PM" src="https://user-images.githubusercontent.com/45757384/149688034-6e5b16da-467b-4aff-9270-c3311deaeb5a.png">
+3. Add Page //screenshot
+4. Edit page //screenshot
