@@ -15,7 +15,7 @@ class PostForm(forms.ModelForm):
         widget=forms.RadioSelect(),
         choices=People.role)
         #Adding Placeholders for the form fields 
-        self.fields['firstname'] = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'FirstName','label':""}))
+        self.fields['firstname'] = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'FirstName'}))
         self.fields['lastname'] = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'LastName'}))
         self.fields['email'] = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Email'}))
         self.fields['phone'] = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Phone'}))
