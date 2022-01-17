@@ -18,10 +18,10 @@ This Project helps employess to add and edit the employee details....
 1) List page to show the Team
    - Shows the count of the  team members and the member details
 3) Add page to add the users
-   - phone number and email should be unique.Phone number should be of 10 characters
+   -phone number and email should be unique.Phone number should be of 10 characters
    - By default member role is set to regular
 5) Edit page to edit the user info 
-   - can make changes or delete the member
+   - Can make changes to the memeber or delete the member
 
 
 # Tech Stacks
